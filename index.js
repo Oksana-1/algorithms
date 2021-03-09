@@ -15,3 +15,6 @@ export const findLongestWordLength = (string) => {
 export const largestOfFour = (array) => {
   return array.map(innerArray => innerArray.sort((prev, next) => prev > next ? -1 : 1 )[0]);
 }
+export const  confirmEnding = (string, target) => {
+  return Boolean(string.match(`${target}$`));
+}
