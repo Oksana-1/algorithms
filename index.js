@@ -25,3 +25,6 @@ export const confirmEnding = (string, target) => {
 export const repeatStringNumTimes = (str, num) => {
   return num <= 0 ? "" : str + repeatStringNumTimes(str, num - 1);
 };
+export const truncateString = (str, num) => {
+  return str.length > num ? `${str.slice(0, num)}...`: str;
+};
