@@ -28,3 +28,9 @@ export const repeatStringNumTimes = (str, num) => {
 export const truncateString = (str, num) => {
   return str.length > num ? `${str.slice(0, num)}...`: str;
 };
+export const findElement = (arr, func) => {
+  for (let i = 0; i < arr.length; i++) {
+    if (func(arr[i])) return arr[i];
+  }
+  return undefined;
+}
