@@ -34,3 +34,6 @@ export const findElement = (arr, func) => {
   }
   return undefined;
 }
+export const isBoolean = (value) => {
+  return typeof value === 'boolean';
+}
