@@ -26,14 +26,22 @@ export const repeatStringNumTimes = (str, num) => {
   return num <= 0 ? "" : str + repeatStringNumTimes(str, num - 1);
 };
 export const truncateString = (str, num) => {
-  return str.length > num ? `${str.slice(0, num)}...`: str;
+  return str.length > num ? `${str.slice(0, num)}...` : str;
 };
 export const findElement = (arr, func) => {
   for (let i = 0; i < arr.length; i++) {
     if (func(arr[i])) return arr[i];
   }
   return undefined;
-}
+};
 export const isBoolean = (value) => {
-  return typeof value === 'boolean';
-}
+  return typeof value === "boolean";
+};
+export const titleCase = (string) => {
+  return string
+    .split(" ")
+    .map(
+      (word) => word[0].toUpperCase() + word.slice(1, word.length).toLowerCase()
+    )
+    .join(" ");
+};
