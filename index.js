@@ -34,6 +34,10 @@ export const findElement = (arr, func) => {
   }
   return undefined;
 };
+/*
+Check if a value is classified as a boolean primitive. Return true or false.
+Boolean primitives are true and false.
+*/
 export const isBoolean = (value) => {
   return typeof value === "boolean";
 };
