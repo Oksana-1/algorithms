@@ -64,3 +64,12 @@ export const frankenSplice = (arr1, arr2, n) => {
   result.splice(n, 0, ...arr1);
   return result;
 };
+/*
+Remove all falsy values from an array.
+Falsy values in JavaScript are false, null, 0, "", undefined, and NaN.
+Hint: Try converting each value to a Boolean.
+*/
+
+export const bouncer = (array) => {
+  return array.filter(element => !!element);
+}
