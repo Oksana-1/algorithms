@@ -71,8 +71,8 @@ Hint: Try converting each value to a Boolean.
 */
 
 export const bouncer = (array) => {
-  return array.filter(element => !!element);
-}
+  return array.filter((element) => !!element);
+};
 /*
 Return the lowest index at which a value (second argument) should be inserted into an array (first argument) once it has been sorted. The returned value should be a number.
 For example, getIndexToIns([1,2,3,4], 1.5) should return 1 because it is greater than 1 (index 0), but less than 2 (index 1).
@@ -82,7 +82,7 @@ export const getIndexToIns = (arr, num) => {
   arr.push(num);
   arr.sort((a, b) => a - b);
   return arr.indexOf(num);
-}
+};
 /*
 Return true if the string in the first element of the array contains all of the letters of the string in the second element of the array.
 For example, ["hello", "Hello"], should return true because all of the letters in the second string are present in the first, ignoring case.
@@ -90,9 +90,20 @@ The arguments ["hello", "hey"] should return false because the string hello does
 Lastly, ["Alien", "line"], should return true because all of the letters in line are present in Alien.
 */
 export const mutation = (array) => {
-  const letters =  array[1].toLowerCase().split('');
+  const letters = array[1].toLowerCase().split("");
   const word = array[0].toLowerCase();
-  return !letters.some(letter => word.indexOf(letter) === -1);
-}
+  return !letters.some((letter) => word.indexOf(letter) === -1);
+};
 
-mutation(["hello", "hey"]);
+/*
+Write a function that splits an array (first argument) into groups the length of size (second argument) and returns them as a two-dimensional array.
+ */
+export const chunkArrayInGroups = (array, size) => {
+  if (array.length <= size) {
+    return [array];
+  } else {
+    return [array.slice(0, size)].concat(
+      chunkArrayInGroups(array.slice(size), size)
+    );
+  }
+};
