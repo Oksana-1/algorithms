@@ -115,3 +115,13 @@ export const chunkArrayInGroups = (array, size) => {
     );
   }
 };
+/*
+We'll pass you an array of two numbers. Return the sum of those two numbers plus the sum of all the numbers between them. The lowest number will not always come first.
+For example, sumAll([4,1]) should return 10 because sum of all the numbers between 1 and 4 (both inclusive) is 10.
+*/
+export const sumAll = (array) => {
+  const [min, max] = [...array].sort((a, b) => a - b);
+  return max === min
+    ? min
+    : sumAll([min, max-1]) + max;
+}
