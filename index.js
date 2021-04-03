@@ -23,6 +23,10 @@ export const factorialize = (number) => {
   if (number === 0) return 1;
   return number * factorialize(number - 1);
 };
+/*
+Return the length of the longest word in the provided sentence.
+Your response should be a number.
+*/
 export const findLongestWordLength = (string) => {
   const sortedWords = string
     .split(" ")
