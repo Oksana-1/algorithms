@@ -143,3 +143,12 @@ In other words, return the symmetric difference of the two arrays.
 export const diffArray = (arr1, arr2) => {
   return [... arr1, ...arr2].filter(item => !arr1.includes(item) || !arr2.includes(item));
 }
+/*
+You will be provided with an initial array (the first argument in the destroyer function), followed by one or more arguments.
+Remove all elements from the initial array that are of the same value as these arguments.
+Note: You have to use the arguments object.
+*/
+export const destroyer = (array) => {
+  const elementsToDelete = Array.prototype.slice.call(arguments,1);
+  return array.filter(element => !elementsToDelete.includes(element));
+}
