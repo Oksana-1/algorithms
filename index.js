@@ -33,6 +33,11 @@ export const findLongestWordLength = (string) => {
     .sort((prev, next) => (prev.length > next.length ? -1 : 1));
   return sortedWords[0].length;
 };
+/*
+Return an array consisting of the largest number from each provided sub-array.
+For simplicity, the provided array will contain exactly 4 sub-arrays.
+Remember, you can iterate through an array with a simple for loop, and access each member with array syntax arr[i].
+ */
 export const largestOfFour = (array) => {
   return array.map(
     (innerArray) => innerArray.sort((prev, next) => (prev > next ? -1 : 1))[0]
