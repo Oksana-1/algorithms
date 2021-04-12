@@ -59,6 +59,10 @@ For the purpose of this challenge, do not use the built-in .repeat() method.
 export const repeatStringNumTimes = (str, num) => {
   return num <= 0 ? "" : str + repeatStringNumTimes(str, num - 1);
 };
+/*
+Truncate a string (first argument) if it is longer than the given maximum string length (second argument).
+Return the truncated string with a ... ending.
+*/
 export const truncateString = (str, num) => {
   return str.length > num ? `${str.slice(0, num)}...` : str;
 };
