@@ -51,6 +51,11 @@ But for the purpose of this challenge, we would like you to use one of the JavaS
 export const confirmEnding = (string, target) => {
   return Boolean(string.match(`${target}$`));
 };
+/*
+Repeat a given string str (first argument) for num times (second argument).
+Return an empty string if num is not a positive number.
+For the purpose of this challenge, do not use the built-in .repeat() method.
+*/
 export const repeatStringNumTimes = (str, num) => {
   return num <= 0 ? "" : str + repeatStringNumTimes(str, num - 1);
 };
