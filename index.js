@@ -66,6 +66,11 @@ Return the truncated string with a ... ending.
 export const truncateString = (str, num) => {
   return str.length > num ? `${str.slice(0, num)}...` : str;
 };
+/*
+Create a function that looks through an array arr and returns the first element in it that passes a 'truth test'.
+This means that given an element x, the 'truth test' is passed if func(x) is true.
+I no element passes the test, return undefined.
+* */
 export const findElement = (arr, func) => {
   for (let i = 0; i < arr.length; i++) {
     if (func(arr[i])) return arr[i];
