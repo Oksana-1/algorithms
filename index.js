@@ -176,3 +176,10 @@ export const destroyer = (array) => {
   const elementsToDelete = Array.prototype.slice.call(arguments,1);
   return array.filter(element => !elementsToDelete.includes(element));
 }
+/*
+ Conert a string to spinal case. Spinal case is all-lowercase-words-joined-by-dashes.
+*/
+export const  spinalCase = (string) => {
+  const regExp = /\s|_|(?=[A-Z])/;
+  return string.split(regExp).join("-").toLowerCase();
+}
